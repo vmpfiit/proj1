@@ -6,45 +6,45 @@ string string_from_int(int number)
 {
 	string answer;
 	switch (number){
-	case 0: answer= "null";
+	case 0: answer= "ноль";
 		break;
-	case 1: answer= "one";
+	case 1: answer= "один";
 		break;
-	case 2: answer= "two";
+	case 2: answer= "два";
 		break;
-	case 3: answer= "three";
+	case 3: answer= "три";
 		break;
-	case 4: answer= "four";
+	case 4: answer= "четыре";
 		break;
-	case 5: answer= "five";
+	case 5: answer= "пять";
 		break;
-	case 6: answer= "six";
+	case 6: answer= "шесть";
 		break;
-	case 7: answer= "seven";
+	case 7: answer= "семь";
 		break;
-	case 8: answer= "eight";
+	case 8: answer= "восемь";
 		break;
-	case 9: answer= "nine";
+	case 9: answer= "девять";
 		break;
-	case 10: answer= "ten";
+	case 10: answer= "десять";
 		break;
-	case 11: answer= "eleven";
+	case 11: answer= "одиннадцать";
 		break;
-	case 12: answer= "twelve";
+	case 12: answer= "двенадцать";
 		break;
-	case 13: answer= "thirteen";
+	case 13: answer= "тринадцать";
 		break;
-	case 14: answer= "fourteen";
+	case 14: answer= "четырнадцать";
 		break;
-	case 15: answer= "fiveteen";
+	case 15: answer= "пятнадцать";
 		break;
-	case 16: answer= "sixteen";
+	case 16: answer= "шестнадацть";
 		break;
-	case 17: answer= "seventeen";
+	case 17: answer= "семнадцать";
 		break;
-	case 18: answer= "eighteen";
+	case 18: answer= "восемнадцать";
 		break;
-	case 19: answer= "nineteen";
+	case 19: answer= "девятнадцать";
 		break;
 
 	}
@@ -55,62 +55,66 @@ string numbers_less_100_to_string(int number){
 	string answer;
 	int a;
 		a=number%10;
+		if(number>=0 && number<=19){
+		answer=string_from_int(number);
+		}else{
 	if(number/10==2){
 			if(a==0){
-			answer="twenty";
+			answer="двадцать";
 			} else {
-			answer="twenty " + string_from_int(a);
+			answer="двадцать " + string_from_int(a);
 			}
 		}
 	if(number/10==3){
 			if(a==0){
-			answer="thirty";
+			answer="тридцать";
 			} else {
-			answer="thirty " + string_from_int(a);
+			answer="тридцать " + string_from_int(a);
 			}
 		}
 	if(number/10==4){
 			if(a==0){
-			answer="forty";
+			answer="сорок";
 			} else {
-			answer="forty " + string_from_int(a);
+			answer="сорок " + string_from_int(a);
 			}
 		}
 	if(number/10==5){
 			if(a==0){
-			answer="fifty";
+			answer="пятьдесят";
 			} else {
-			answer="fifty " + string_from_int(a);
+			answer="пятьдесят " + string_from_int(a);
 			}
 		}
 		if(number/10==6){
 			if(a==0){
-			answer="sixty";
+			answer="шестьдесят";
 			} else {
-			answer="sixty " + string_from_int(a);
+			answer="шестьдесят " + string_from_int(a);
 			}
 		}
 	if(number/10==7){
 			if(a==0){
-			answer="seventy";
+			answer="семьдесят";
 			} else {
-			answer="seventy " + string_from_int(a);
+			answer="семьдесят " + string_from_int(a);
 			}
 		}
 	if(number/10==8){
 			if(a==0){
-			answer="eighty";
+			answer="восемьдесят";
 			} else {
-			answer="eighty " + string_from_int(a);
+			answer="восемьдесят " + string_from_int(a);
 			}
 		}
 	if(number/10==9){
 			if(a==0){
-			answer="ninety";
+			answer="девяносто";
 			} else {
-			answer="ninety " + string_from_int(a);
+			answer="девяносто " + string_from_int(a);
 			}
 		}
+	}
 	return answer;	
 }
 
@@ -120,67 +124,102 @@ string number_less_1000_to_string(int number){
 	a=number%100;
 	if(number/100==1){
 			if(a==0){
-			answer="one hundred";
+			answer="сто";
 			} else {
-			answer="one hundred " + numbers_less_100_to_string(a);
+			answer="сто " + numbers_less_100_to_string(a);
 			}
 		}
 	if(number/100==2){
 			if(a==0){
-			answer="two hundred";
+			answer="двести";
 			} else {
-			answer="two hundred " + numbers_less_100_to_string(a);
+			answer="двести " + numbers_less_100_to_string(a);
 			}
 		}
 	if(number/100==3){
 			if(a==0){
-			answer="three hundred";
+			answer="триста";
 			} else {
-			answer="three hundred " + numbers_less_100_to_string(a);
+			answer="триста " + numbers_less_100_to_string(a);
 			}
 		}
 	if(number/100==4){
 			if(a==0){
-			answer="four hundred";
+			answer="четыретса";
 			} else {
-			answer="four hundred " + numbers_less_100_to_string(a);
+			answer="четыреста " + numbers_less_100_to_string(a);
 			}
 		}
 	if(number/100==5){
 			if(a==0){
-			answer="five hundred";
+			answer="пятсот";
 			} else {
-			answer="five hundred " + numbers_less_100_to_string(a);
+			answer="пятсот " + numbers_less_100_to_string(a);
 			}
 		}
 	if(number/100==6){
 			if(a==0){
-			answer="six hundred";
+			answer="шестсот";
 			} else {
-			answer="six hundred " + numbers_less_100_to_string(a);
+			answer="шестсот " + numbers_less_100_to_string(a);
 			}
 		}
 	if(number/100==7){
 			if(a==0){
-			answer="seven hundred";
+			answer="семсот";
 			} else {
-			answer="seven hundred " + numbers_less_100_to_string(a);
+			answer="семсот " + numbers_less_100_to_string(a);
 			}
 		}
 	if(number/100==8){
 			if(a==0){
-			answer="eight hundred";
+			answer="восемсот";
 			} else {
-			answer="eight hundred " + numbers_less_100_to_string(a);
+			answer="восемсот " + numbers_less_100_to_string(a);
 			}
 		}
 	if(number/100==9){
 			if(a==0){
-			answer="nine hundred";
+			answer="девятсот";
 			} else {
-			answer="nine hundred " + numbers_less_100_to_string(a);
+			answer="девятсот " + numbers_less_100_to_string(a);
 			}
 		}
 	return answer;	
 
+}
+
+
+string objects_less_100_to_string(int number, string s1, string s2, string s3)
+{
+string answer;
+	int a;
+	a=number%10;
+	if(number>=11 && number<=14){
+	answer= numbers_less_100_to_string(number)+s3;
+	}else{
+	if(a==0 || (a>=5 && a<=9)) answer= numbers_less_100_to_string(a)+s3;
+	if(a==1) answer= numbers_less_100_to_string(a)+s1;
+	if(a>=2 && a<=4) answer= numbers_less_100_to_string(a)+s2;
+	}
+
+
+return answer;
+}
+
+
+string currency_to_string(
+    int integer_value, string si1, string si2, string si3,
+    int decimal_value, string sd1, string sd2, string sd3)
+{
+    string answer;
+
+
+
+
+	answer=objects_less_100_to_string(integer_value, si1, si2, si3)+", "+objects_less_100_to_string(decimal_value, sd1, sd2, sd3);
+
+
+
+    return answer;
 }
