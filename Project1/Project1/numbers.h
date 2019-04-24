@@ -118,10 +118,11 @@ string numbers_less_100_to_string(int number){
 	return answer;	
 }
 
-string number_less_1000_to_string(int number){
+string numbers_less_1000_to_string(int number){
 	string answer;
 	int a;
 	a=number%100;
+	if(number<100) answer=numbers_less_100_to_string(number);
 	if(number/100==1){
 			if(a==0){
 			answer="сто";
@@ -145,7 +146,7 @@ string number_less_1000_to_string(int number){
 		}
 	if(number/100==4){
 			if(a==0){
-			answer="четыретса";
+			answer="четыреста";
 			} else {
 			answer="четыреста " + numbers_less_100_to_string(a);
 			}
@@ -195,15 +196,25 @@ string objects_less_100_to_string(int number, string s1, string s2, string s3)
 string answer;
 	int a;
 	a=number%10;
+	if(number==1) answer= string_from_int(number)+s1;
+	if(number>=2 && number<=4) answer= string_from_int(number)+s2;
+	if(number==0 || (number>=5 && number<=9)) answer= string_from_int(number)+s3;
 	if(number>=11 && number<=14){
 	answer= numbers_less_100_to_string(number)+s3;
-	}else{
-	if(a==0 || (a>=5 && a<=9)) answer= numbers_less_100_to_string(a)+s3;
-	if(a==1) answer= numbers_less_100_to_string(a)+s1;
-	if(a>=2 && a<=4) answer= numbers_less_100_to_string(a)+s2;
 	}
-
-
+	if(number>14 || number==10){
+	if(a==0 || (a>=5 && a<=9)) answer= numbers_less_100_to_string(number)+s3;
+	if(a==1) answer= numbers_less_100_to_string(number)+s1;
+	if(a>=2 && a<=4) answer= numbers_less_100_to_string(number)+s2;
+	}
+	/*if(number%10==1)
+		answer=number_less_1000_to_string(number)+" "+s1;
+	else
+		if(number%10>1 && number%10<5)
+			answer=number_less_1000_to_string(number)+" "+s2;
+		else
+			answer=number_less_1000_to_string(number)+" "+s3;
+			*/
 return answer;
 }
 
