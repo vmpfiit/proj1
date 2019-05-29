@@ -54,64 +54,64 @@ string string_from_int(int number)
 string numbers_less_100_to_string(int number){
 	string answer;
 	int a;
-		a=number%10;
-		if(number>=0 && number<=19){
+	a=number%10;
+	if(number>=0 && number<=19){
 		answer=string_from_int(number);
-		}else{
-	if(number/10==2){
+	}else{
+		if(number/10==2){
 			if(a==0){
-			answer="äâàäöàòü";
+				answer="äâàäöàòü";
 			} else {
-			answer="äâàäöàòü " + string_from_int(a);
+				answer="äâàäöàòü " + string_from_int(a);
 			}
 		}
-	if(number/10==3){
+		if(number/10==3){
 			if(a==0){
-			answer="òğèäöàòü";
+				answer="òğèäöàòü";
 			} else {
-			answer="òğèäöàòü " + string_from_int(a);
+				answer="òğèäöàòü " + string_from_int(a);
 			}
 		}
-	if(number/10==4){
+		if(number/10==4){
 			if(a==0){
-			answer="ñîğîê";
+				answer="ñîğîê";
 			} else {
-			answer="ñîğîê " + string_from_int(a);
+				answer="ñîğîê " + string_from_int(a);
 			}
 		}
-	if(number/10==5){
+		if(number/10==5){
 			if(a==0){
-			answer="ïÿòüäåñÿò";
+				answer="ïÿòüäåñÿò";
 			} else {
-			answer="ïÿòüäåñÿò " + string_from_int(a);
+				answer="ïÿòüäåñÿò " + string_from_int(a);
 			}
 		}
 		if(number/10==6){
 			if(a==0){
-			answer="øåñòüäåñÿò";
+				answer="øåñòüäåñÿò";
 			} else {
-			answer="øåñòüäåñÿò " + string_from_int(a);
+				answer="øåñòüäåñÿò " + string_from_int(a);
 			}
 		}
-	if(number/10==7){
+		if(number/10==7){
 			if(a==0){
-			answer="ñåìüäåñÿò";
+				answer="ñåìüäåñÿò";
 			} else {
-			answer="ñåìüäåñÿò " + string_from_int(a);
+				answer="ñåìüäåñÿò " + string_from_int(a);
 			}
 		}
-	if(number/10==8){
+		if(number/10==8){
 			if(a==0){
-			answer="âîñåìüäåñÿò";
+				answer="âîñåìüäåñÿò";
 			} else {
-			answer="âîñåìüäåñÿò " + string_from_int(a);
+				answer="âîñåìüäåñÿò " + string_from_int(a);
 			}
 		}
-	if(number/10==9){
+		if(number/10==9){
 			if(a==0){
-			answer="äåâÿíîñòî";
+				answer="äåâÿíîñòî";
 			} else {
-			answer="äåâÿíîñòî " + string_from_int(a);
+				answer="äåâÿíîñòî " + string_from_int(a);
 			}
 		}
 	}
@@ -124,68 +124,69 @@ string numbers_less_1000_to_string(int number){
 	a=number%100;
 	if(number<100) answer=numbers_less_100_to_string(number);
 	if(number/100==1){
-			if(a==0){
+		if(a==0){
 			answer="ñòî";
-			} else {
+		} else {
 			answer="ñòî " + numbers_less_100_to_string(a);
-			}
 		}
+	}
 	if(number/100==2){
-			if(a==0){
+		if(a==0){
 			answer="äâåñòè";
-			} else {
+		} else {
 			answer="äâåñòè " + numbers_less_100_to_string(a);
-			}
 		}
+	}
 	if(number/100==3){
-			if(a==0){
+		if(a==0){
 			answer="òğèñòà";
-			} else {
+		} else {
 			answer="òğèñòà " + numbers_less_100_to_string(a);
-			}
 		}
+	}
 	if(number/100==4){
-			if(a==0){
+		if(a==0){
 			answer="÷åòûğåñòà";
-			} else {
+		} else {
 			answer="÷åòûğåñòà " + numbers_less_100_to_string(a);
-			}
 		}
+	}
 	if(number/100==5){
-			if(a==0){
+		if(a==0){
 			answer="ïÿòñîò";
-			} else {
+		} else {
 			answer="ïÿòñîò " + numbers_less_100_to_string(a);
-			}
 		}
+	}
 	if(number/100==6){
-			if(a==0){
+		if(a==0){
 			answer="øåñòñîò";
-			} else {
+		} else {
 			answer="øåñòñîò " + numbers_less_100_to_string(a);
-			}
 		}
+	}
 	if(number/100==7){
-			if(a==0){
+		if(a==0){
 			answer="ñåìñîò";
-			} else {
+		} else {
 			answer="ñåìñîò " + numbers_less_100_to_string(a);
-			}
 		}
+	}
 	if(number/100==8){
-			if(a==0){
+		if(a==0){
 			answer="âîñåìñîò";
-			} else {
+		} else {
 			answer="âîñåìñîò " + numbers_less_100_to_string(a);
-			}
 		}
+	}
 	if(number/100==9){
-			if(a==0){
+		if(a==0){
 			answer="äåâÿòñîò";
-			} else {
+		} else {
 			answer="äåâÿòñîò " + numbers_less_100_to_string(a);
-			}
 		}
+	}
+
 	return answer;	
 
 }
@@ -193,37 +194,37 @@ string numbers_less_1000_to_string(int number){
 
 string objects_less_100_to_string(int number, string s1, string s2, string s3)
 {
-string answer;
+	string answer;
 	int a;
 	a=number%10;
 	if(number==1) answer= string_from_int(number)+s1;
 	if(number>=2 && number<=4) answer= string_from_int(number)+s2;
 	if(number==0 || (number>=5 && number<=9)) answer= string_from_int(number)+s3;
 	if(number>=11 && number<=14){
-	answer= numbers_less_100_to_string(number)+s3;
+		answer= numbers_less_100_to_string(number)+s3;
 	}
 	if(number>14 || number==10){
-	if(a==0 || (a>=5 && a<=9)) answer= numbers_less_100_to_string(number)+s3;
-	if(a==1) answer= numbers_less_100_to_string(number)+s1;
-	if(a>=2 && a<=4) answer= numbers_less_100_to_string(number)+s2;
+		if(a==0 || (a>=5 && a<=9)) answer= numbers_less_100_to_string(number)+s3;
+		if(a==1) answer= numbers_less_100_to_string(number)+s1;
+		if(a>=2 && a<=4) answer= numbers_less_100_to_string(number)+s2;
 	}
 	/*if(number%10==1)
-		answer=number_less_1000_to_string(number)+" "+s1;
+	answer=number_less_1000_to_string(number)+" "+s1;
 	else
-		if(number%10>1 && number%10<5)
-			answer=number_less_1000_to_string(number)+" "+s2;
-		else
-			answer=number_less_1000_to_string(number)+" "+s3;
-			*/
-return answer;
+	if(number%10>1 && number%10<5)
+	answer=number_less_1000_to_string(number)+" "+s2;
+	else
+	answer=number_less_1000_to_string(number)+" "+s3;
+	*/
+	return answer;
 }
 
 
 string currency_to_string(
-    int integer_value, string si1, string si2, string si3,
-    int decimal_value, string sd1, string sd2, string sd3)
+	int integer_value, string si1, string si2, string si3,
+	int decimal_value, string sd1, string sd2, string sd3)
 {
-    string answer;
+	string answer;
 
 
 
@@ -232,5 +233,5 @@ string currency_to_string(
 
 
 
-    return answer;
+	return answer;
 }

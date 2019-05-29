@@ -8,7 +8,7 @@
 
 BOOST_AUTO_TEST_SUITE( test_suite1 )
 
-BOOST_AUTO_TEST_CASE( test_case1 )
+	BOOST_AUTO_TEST_CASE( test_case1 )
 {
 	BOOST_TEST(string_from_int(0)== string("ноль"));
 	BOOST_TEST(string_from_int(1)== string("один"));
@@ -76,6 +76,9 @@ BOOST_AUTO_TEST_CASE( test_case4){
 	BOOST_TEST(objects_less_100_to_string(2," рубль"," рубля"," рублей")==string("два рубля"));
 	BOOST_TEST(objects_less_100_to_string(30," рубль"," рубля"," рублей")==string("тридцать рублей"));
 	BOOST_TEST(objects_less_100_to_string(12," стул"," стула"," стульев")==string("двенадцать стульев"));
+	BOOST_TEST(objects_less_100_to_string(11," стул"," стула"," стульев")==string("одиннадцать стульев"));
+	BOOST_TEST(objects_less_100_to_string(6," стул"," стула"," стульев")==string("шесть стульев"));
+	BOOST_TEST(objects_less_100_to_string(17," стул"," стула"," стульев")==string("семнадцать стульев"));
 
 
 
@@ -83,6 +86,7 @@ BOOST_AUTO_TEST_CASE( test_case4){
 BOOST_AUTO_TEST_CASE( test_case5){
 	BOOST_TEST(currency_to_string(25, " рубль", " рубля", " рублей", 73, " копейка", " копейки", " копеек")==string("двадцать пять рублей, семьдесят три копейки"));
 	BOOST_TEST(currency_to_string(22, " рубль", " рубля", " рублей", 31, " копейка", " копейки", " копеек")==string("двадцать два рубля, тридцать один копейка"));
+	BOOST_TEST(currency_to_string(27, " доллар", " доллара", " долларов", 3, " цент", " цента", " центов")==string("двадцать семь долларов, три цента"));
 
 
 }
