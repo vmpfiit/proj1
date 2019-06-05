@@ -1,13 +1,15 @@
-#ifndef TEST
+#ifndef Test
+
+
+
 #include <iostream>
-#include "numbers.h"
 using namespace std;
 
 
 
-int main( int argc, char *argv[])
+int main()
 {
 	cout<<"Hello World!";
 	return 0;
 }
-#endif
+#endif // !Test
